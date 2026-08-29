@@ -365,9 +365,22 @@ def process_refund(refund_request_id: str, approved_amount: float) -> Dict[str, 
                 "payment_status": payment.status if payment else "NOT_FOUND",
             }
 
-        # ── Safety Check 4: Amount cannot exceed order amount ─────────────
+        # ── Safety Check 4: Amount must be a valid positive numeric value ──
         order_amount = Decimal(str(order.amount))
-        refund_amount = Decimal(str(approved_amount)).quantize(Decimal("0.01"))
+        try:
+            refund_amount = Decimal(str(approved_amount)).quantize(Decimal("0.01"))
+        except Exception:
+            return {
+                "error": f"Invalid refund amount: '{approved_amount}' is not a valid numeric value.",
+                "blocked": True,
+            }
+
+        if refund_amount <= Decimal("0.00"):
+            return {
+                "error": f"Refund amount must be greater than 0. Got: ${refund_amount}",
+                "blocked": True,
+            }
+
         if refund_amount > order_amount:
             return {
                 "error": f"Approved amount ${refund_amount} exceeds order amount ${order_amount}",
