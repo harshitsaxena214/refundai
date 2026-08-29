@@ -380,7 +380,7 @@ and requirement gaps, and Qodo reported no material issues requiring changes.
 
 ### Representative Pull Request
 
-[PR #XX - Add refund amount validation](YOUR_PR_URL)
+[PR #2 - Add refund amount validation](https://github.com/harshitsaxena214/refundai/pull/2)
 
 This pull request contains a meaningful hackathon change to the
 refund execution flow and was reviewed by Qodo before being merged.
@@ -395,6 +395,8 @@ Qodo's review reported:
 - **Result:** No material issues found
 
 ![Qodo Code Review] 
+<img width="1366" height="716" alt="Screenshot 2026-08-30 004649" src="https://github.com/user-attachments/assets/c8530438-2861-463f-a696-97b1c34f052f" />
+
 
 ### Review History
 
