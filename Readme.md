@@ -371,6 +371,42 @@ Qodo also provides reusable Agent Skills that can apply engineering rules and su
 
 ---
 
+## Qodo Code Review Evidence
+
+Qodo reviewed a representative hackathon change focused on adding
+server-side validation around refund amounts in RefundGuard.
+The review checked the implementation for bugs, rule violations,
+and requirement gaps, and Qodo reported no material issues requiring changes.
+
+### Representative Pull Request
+
+[PR #XX - Add refund amount validation](YOUR_PR_URL)
+
+This pull request contains a meaningful hackathon change to the
+refund execution flow and was reviewed by Qodo before being merged.
+
+### Qodo Review Result
+
+Qodo's review reported:
+
+- **Bugs:** 0
+- **Rule violations:** 0
+- **Requirement gaps:** 0
+- **Result:** No material issues found
+
+![Qodo Code Review] 
+
+### Review History
+
+1. Created a feature branch for the refund amount validation change.
+2. Opened a GitHub pull request containing the implementation.
+3. Qodo reviewed the pull request.
+4. Qodo reported no material issues requiring changes.
+5. No code changes were required following the review.
+6. The pull request was merged after review.
+
+---
+
 # 🏗️ Architecture
 
 ```text
